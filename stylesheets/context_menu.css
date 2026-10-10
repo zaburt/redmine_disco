@@ -1,0 +1,57 @@
+#context-menu { position: absolute; z-index: 40; font-size: 0.9em;}
+#context-menu ul, #context-menu li, #context-menu a {margin:0; padding:0; border:0; }
+#context-menu ul {width:200px; border: 1px solid #F37024; background: #3A2A4A; list-style:none; padding:0px; border-radius:0px; color: inherit; border: 1px solid #171019;}
+#context-menu ul li a {color: inherit !important; }
+#context-menu ul li .icon-only { float: right; }
+#context-menu li {position:relative; padding:3px 10px 3px 10px; z-index:39; border: none !important;}
+#context-menu li.folder ul { position:absolute; left:168px; /* IE6 */ top:-2px; max-height:300px; overflow:hidden; overflow-y: auto; }
+#context-menu li.folder>ul { left:200px; }
+#context-menu.reverse-y li.folder>ul, #context-menu li.folder.up>ul { top:auto; bottom:0; }
+#context-menu.reverse-x li.folder ul { left:auto; right:168px; /* IE6 */ }
+#context-menu.reverse-x li.folder>ul { right:148px; }
+#context-menu.reverse-y li.folder.down>ul { position:absolute; top:-2px; bottom: auto; max-height:300px; overflow:hidden; overflow-y: auto;}
+#context-menu a { text-decoration:none !important; padding: 3px; width:100%; color: inherit; display:flex; align-items:center; min-height:18px; /* IE */}
+#context-menu li>a.icon, #context-menu li>a.icon-only, #context-menu li>a.icon-checked { padding-left:0; }
+#context-menu li>a { width:auto; } /* others */
+#context-menu .icon-svg { stroke: #EFE8F3; }
+#context-menu li:hover > a .icon-svg { stroke: #2C2038; }
+#context-menu a.disabled, #context-menu a.disabled:hover {color: #9A8AA8;}
+#context-menu li a.submenu { padding-right:16px; position: relative; }
+#context-menu li.folder { display:flex; align-items:center; }
+#context-menu li.folder > a.submenu { flex:1 1 auto; }
+#context-menu li.folder > .icon-only { float:none; flex:0 0 auto; display:flex; align-items:center; }
+#context-menu li:hover { border:1px solid #F37024; background-color:#35B7CC; border-radius:3px; color: #2C2038 !important; }
+#context-menu li.folder ul li  { background-color:#3A2A4A; color: inherit; }
+#context-menu li.folder:hover ul li a { color: #EFE8F3 !important;}
+#context-menu li.folder:hover ul li:hover { z-index:40;  background-color:#35B7CC; color: #2C2038 !important;}
+#context-menu li.folder:hover ul li:hover a { z-index:40;  background-color:#35B7CC; color: #2C2038 !important;}
+#context-menu ul ul, #context-menu  li:hover ul ul { display:none; }
+#context-menu li:hover ul, #context-menu li:hover li:hover ul { display:block; }
+
+
+/* selected element */
+/* originals
+.context-menu-selection { background-color:#35B7CC !important; color:#FAF5FC !important; }
+.context-menu-selection a, .context-menu-selection a:hover { color:#FAF5FC !important; }
+.context-menu-selection:hover { background-color:#35B7CC !important; color:#FAF5FC  !important; }
+*/
+.context-menu-selection { background-color:#35B7CC !important; color: #2C2038 !important; }
+.context-menu-selection :not(.id) a, .context-menu-selection :not(.id) a:hover { color: #2C2038 !important; }
+.context-menu-selection:hover a.user.locked, .context-menu-selection:hover a.user.locked:link, .context-menu-selection:hover a.user.locked:visited {color: #2C2038 !important; }
+.context-menu-selection a.icon-only .icon-svg { stroke: #2C2038 !important; }
+div#gantt_area .context-menu-selection { background-color: rgba(243, 112, 36, 0.35) !important; }
+div#gantt_area .context-menu-selection:hover { background-color: rgba(243, 112, 36, 0.35) !important; }
+div#gantt_area .context-menu-selection a { color: #35B7CC !important; }
+
+
+#context-menu li:hover > a.icon .icon-svg, #context-menu li:hover > a.icon-only .icon-svg, #context-menu li:hover > span.icon-actions .icon-svg, #context-menu li:hover > span.icon-only .icon-svg {
+    stroke: #2C2038;
+}
+
+.cal .context-menu-selection a {
+    color: #2C2038 !important;
+}
+
+.cal .context-menu-selection .icon-svg {
+    stroke: #2C2038;
+}
